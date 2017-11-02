@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Bed Shop</title>
+  <link href="style/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/app.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <p class="color1"><strong><span class="bigletter1">Bed </span></strong><em> Shop</em></p>
+      <nav>
+        <ul>
+          <li>Home
+            <ul class="drop_down_menu">
+              <li class="new_item">News</li>
+              <li class="new_item">Promotion</li>
+            </ul>
+          </li>
+          <li>About Us
+            <ul class="drop_down_menu">
+              <li class="new_item">Facts</li>
+              <li class="new_item">Our team</li>
+              <li class="new_item">History</li>
+            </ul>
+          </li>
+          <li>Gallery
+            <ul class="drop_down_menu">
+              <li class="new_item">Single Bed</li>
+              <li class="new_item">Twin Bed</li>
+              <li class="new_item">Bunk Bed</li>
+            </ul>
+          </li>
+          <li>Contact
+            <ul class="drop_down_menu">
+              <li class="new_item">Finance</li>
+              <li class="new_item">Complaint</li>
+              <li class="new_item">Human Resources</li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="section1">
+    <div class="container">
+      <div id="sectionLeft-box">
+        <p class="banner"><strong><i> Lay</i><span class="color2"> ON </span> <i>our</i><span class="color2"> BED</span></strong></p> <br />
+        <p class="text"> It's our dream to give<br/> you a great<br/> night.</p>
+        <div class="button1">More</div>
+      </div>
+      <div id="bedImages">
+        <ul>
+          <li><img src="images/drewniane1.png"></li>
+          <li><img src="images/drewniane2.png"></li>
+          <li><img src="images/metalowe1.png"></li>
+          <li><img src="images/metalowe2.png"></li>
+          <li><img src="images/tapicerowane1.png"></li>
+          <li><img src="images/tapicerowane2.png"></li>
+          <li><img src="images/pietrowe1.png"></li>
+          <li><img src="images/pietrowe2.png"></li>
+          <li><img src="images/pietrowe3.png"></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="section2">
+    <div class="container">
+      <div>
+        <div class="firstElement">
+          <p> Single BED </p>
+        </div>
+        <div class="text2">
+          <p><strong>Option for kids and single</strong></p>
+          <p>From traditional to modern, at Bed Shop you can find single bed frames with different looks. If you want to make more of your space, go for one with built-in storage or one that you can slide boxes underneath. There are also many different colors
+            and materials, and some have that little extra room for another person – just in case!</p>
+        </div>
+      </div>
+      <div>
+        <div class="secondElement">
+          <p> Twin BED </p>
+        </div>
+        <div class="text2">
+          <p><strong>Best option for pairs</strong></p>
+          <p>The best start to your day is a good night’s sleep. A sturdy double bed gives you comfort and quality so you wake up smiling. Many of our double beds and king size beds have smart features like built-in storage or are sized so you can slide
+            boxes underneath. We also have super king size beds, because sometimes that extra space means better sleeping.</p>
+        </div>
+      </div>
+      <div>
+        <div class="thirdElement">
+          <p> Bunk BED </p>
+        </div>
+        <div class="text2">
+          <p><strong>More floor space</strong></p>
+          <p>Bunk beds are a great space saver for the kids’ room, but they can be dangerous if not used properly. Be sure to follow these tips to make sure the bunk bed is safe. Set up the bed in a corner of the room, so two of the sides are against a wall.
+            Don’t put the bed under a ceiling fan or light fixture. Make sure the guardrail on the top bed is at least five inches above the top of the mattress. Check that the ladder is properly attached and secure. Install a nightlight so a child climbing
+            down in the middle of the night can see. Clear the floor near the bed of objects every night. And finally, talk to your kids about bunk bed safety—they should always use the ladder to get up and down, and no roughhousing on the top bed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="section3">
+    <div class="container">
+      <p class="title"><strong>Choose your bed</strong></p>
+      <div class="form">
+        <div class="drop_down_list">
+          <span class="list_label">Choose type of your bed</span>
+          <span class="list_arrow"></span>
+          <ul class="list_panel">
+            <li data-value=2 00>Single Bed</li>
+            <li data-value=4 00>Twin Bed</li>
+            <li data-value=3 00>Bunk Bed</li>
+          </ul>
+        </div>
+        <div class="drop_down_list">
+          <span class="list_label">Choose material</span>
+          <span class="list_arrow"></span>
+          <ul class="list_panel">
+            <li data-value=0>Wooden</li>
+            <li data-value=1 00>Metal</li>
+            <li data-value=2 00>Upholstered</li>
+          </ul>
+        </div>
+        <div class="checkbox">
+          <input type="checkbox" data-value=5 0 id="transport">
+          <label for="transport">Transport</label>
+        </div>
+        <div class="checkbox">
+          <input type="checkbox" data-value=1 50 id="beddingAdd">
+          <label for="beddingAdd">Bedding PLUS</label>
+        </div>
+      </div>
+
+      <div class="image_part">
+      </div>
+
+      <div class="summary_calc">
+        <p class="title"><strong>Summary</strong></p>
+        <div class="summary_panel">
+          <div class="panel_left">
+            <p id="sum_text">Your bed</p>
+            <span class="type"></span>
+            <span class="material"></span>
+            <span class="transport"></span>
+            <span class="bedding"></span>
+          </div>
+          <div class="panel_right">
+            <p id="sum_value">Price</p>
+            <span class="value"></span>
+            <span class="value"></span>
+            <span class="value"></span>
+            <span class="value"></span>
+          </div>
+          <div class="sum_label">SUM</div>
+          <div class="sum"><strong></strong></div>
+        </div>
+        <div class="button_order">Order</div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="section4">
+    <div class="container">
+      <p class="title_option"><strong>Installments options</strong></p>
+      <div>
+        <section class="option">
+          <div id="bigcircle"></div>
+          <div id="smallcircle"></div>
+          <h1> Basic plan </h1>
+          <div class="price_option">
+            <p class="price">99<sup>99</sup></p>
+            <p class="price_unit">$/month</p>
+          </div>
+          <div class="features">
+            <p>Buying and transport</p>
+            <p>Service</p>
+          </div>
+          <div class="button_choose">Choose</div>
+        </section>
+      </div>
+      <div>
+        <section class="option">
+          <div id="bigcircle"></div>
+          <div id="smallcircle"></div>
+          <h1> Standard plan </h1>
+          <div class="price_option">
+            <p class="price">159<sup>99</sup></p>
+            <p class="price_unit">$/month</p>
+          </div>
+          <div class="features">
+            <p>Buying and transport</p>
+            <p>Service</p>
+            <p>Guarantee 5 years</p>
+          </div>
+          <div class="button_choose">Choose</div>
+        </section>
+      </div>
+      <div>
+        <section class="option">
+          <div id="bigcircle"></div>
+          <div id="smallcircle"></div>
+          <h1> Advance plan </h1>
+          <div class="price_option">
+            <p class="price">199<sup>99</sup></p>
+            <p class="price_unit">$/month</p>
+          </div>
+          <div class="features">
+            <p>Buying and transport</p>
+            <p>Service</p>
+            <p>Guarantee 5 years</p>
+            <p>Designer consultation</p>
+          </div>
+          <div class="button_choose">Choose</div>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <section id="section5">
+    <div class="container">
+      <p class="title">Contact</p>
+      <div id="form-field">
+        <input type="text" placeholder="Name" id="name">
+        <div class="validate_error_name"></div>
+        <input type="email" placeholder="Email" id="email">
+        <div class="validate_error_email"></div>
+        <textarea placeholder="Your message" id="message"></textarea>
+        <div class="validate_error_message"></div>
+      </div>
+      <div id="form-submit">
+        <img src="images/drewniane1.png" alt="Drewniane1">
+        <div class="checkbox">
+          <input type="checkbox" id="agreement">
+          <label for="agreement">I agree to the processing of personal data</label>
+        </div>
+        <div class="button_send">Send</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p> Original 2017 &reg; | All Rights Reserved. - Lay on bed</p>
+      <div class="logo">
+        <a href="https://www.facebook.com/" target="_blank"><img id="facebook" src="images/facebook.png" alt="fb logo"></a>
+        <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram.png" alt="instagram logo"></a>
+        <a href="https://www.flickr.com/" target="_blank"><img src="images/flickr.png" alt="flickr logo"></a>
+        <a href="https://twitter.com/" target="_blank"><img src="images/twitter.png" alt="twitter logo"></a>
+        <p> Lay on bed </p>
+      </div>
+    </div>
+
+  </footer>
+
+</body>
+
+</html>
