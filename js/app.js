@@ -1,12 +1,11 @@
 $(function() {
 
-  //HEADER Rozwijanie i zwijanie listy
-  var menuList = $("nav>ul>li");
-  var liListe = menuList.find("ul").children();
-  var click = 0;
+  /*Header */
+  let menuList = $("nav>ul>li");
+
   menuList.on("click", function() {
     $(".drop_down_menu").hide();
-    var ths = $(this);
+    let ths = $(this);
     ths.next().show();
     ths.find("ul").css("z-index", "2");
     ths.find("ul").css("display", "flex");
@@ -33,20 +32,20 @@ $(function() {
     menuList.find("ul").hide();
   })
 
-  //SECTION1 Slider
-  var bedImages = $("#bedImages");
-  var ul = bedImages.find("ul");
-  var liArray = ul.find("li");
-  var currentSlide = 1;
-  var windowWidth = $(window).width();
+  /*Slider*/
+  let bedImages = $("#bedImages");
+  let ul = bedImages.find("ul");
+  let liArray = ul.find("li");
+  let currentSlide = 1;
+  let windowWidth = $(window).width();
 
   if (windowWidth <= 1400) {
-    var width = liArray.eq(6).width();
-    var animationSpeed = 1500;
-    var pause = 3000;
-    var clonelast = liArray.parent().children().last().clone();
+    let width = liArray.eq(6).width();
+    let animationSpeed = 1500;
+    let pause = 3000;
+    let clonelast = liArray.parent().children().last().clone();
     ul.prepend(clonelast);
-    var clonefirst = liArray.parent().children().first().clone();
+    let clonefirst = liArray.parent().children().first().clone();
     ul.append(clonefirst);
     ul.css("left", -width);
     setInterval(function() {
@@ -62,38 +61,38 @@ $(function() {
     }, pause);
   }
 
-  //SECTION2 Zdjecia
-  var photos = $("#section2 .container>div");
-  var photos2 = photos.find("div:nth-child(1)");
+  /*Photos*/
 
+  let photos = $("#section2 .container>div").find("div:nth-child(1)");
 
-  photos2.on("mouseenter", function() {
-    var ths = $(this);
+  photos.on("mouseenter", function() {
+    let ths = $(this);
     ths.find("p").hide();
     ths.css("transform", "scale(1.04)")
   })
 
-  photos2.on("mouseleave", function() {
-    var ths = $(this);
+  photos.on("mouseleave", function() {
+    let ths = $(this);
     ths.find("p").show();
     ths.css("transform", "scale(1.00)")
   })
 
-  //Wysuwanie listy
-  var dropdownList = $('.drop_down_list');
-  var listLabel = $('.list_label');
-  var listArrow = $('.list_arrow');
-  var listPanel = $('.list_panel');
-  var list = $(".list_panel").children();
-  var panelLeft = $(".panel_left");
-  var panelRight = $(".panel_right");
+  /*DropdownList*/
+
+  let dropdownList = $('.drop_down_list');
+  let listLabel = $('.list_label');
+  let listArrow = $('.list_arrow');
+  let listPanel = $('.list_panel');
+  let list = $(".list_panel").children();
+  let panelLeft = $(".panel_left");
+  let panelRight = $(".panel_right");
   sumPanel = panelRight.find(".value");
-  var sum = $(".sum strong");
-  var clickCount = 0;
+  let sum = $(".sum strong");
+  let clickCount = 0;
 
   listArrow.on("click", function() {
     clickCount++;
-    ths = $(this);
+    let ths = $(this);
     if (clickCount % 2 != 0) {
       ths.next().css("display", "block");
     } else {
@@ -101,16 +100,16 @@ $(function() {
     }
   });
 
-  //ustawianie wybranego elementu listy w miejscu wyboru
+  /*Choose bed image*/
   list.on("click", function(event) {
-    ths = $(this);
+    let ths = $(this);
     ths.parent().parent().children().eq(0).text(ths.text());
     ths.parent().css("display", "none");
     ths.parent().parent().children().eq(0).css("color", "rgb(0,0,46)");
     clickCount = 2;
-    var divImage = $(".image_part")
+    let divImage = $(".image_part")
 
-    //section 3 ustawianie obrazka w zaleznosci od wyboru
+
     if (listLabel.eq(0).text() == "Single Bed" && listLabel.eq(1).text() == "Wooden") {
       divImage.css("backgroundImage", "url('images/drewniane1.png')");
     } else if (listLabel.eq(0).text() == "Single Bed" && listLabel.eq(1).text() == "Metal") {
@@ -141,57 +140,55 @@ $(function() {
 
       divImage.css("backgroundImage", "url('images/pietrowe3.png')");
     }
-    //kalkulator
+
+    /*summary calc*/
     if (listLabel.eq(0).text() == "Single Bed") {
       panelLeft.children().eq(1).text("Single Bed");
-      panelRight.children().eq(1).text(list.eq(0).attr("data-value")) //==list.eq(0).attr("data-value")+("zl");
+      panelRight.children().eq(1).text(list.eq(0).attr("data-value"))
     } else if (listLabel.eq(0).text() == "Twin Bed") {
       panelLeft.children().eq(1).text("Twin Bed");
-      panelRight.children().eq(1).text(list.eq(1).attr("data-value")) //==list.eq(0).attr("data-value")+("zl");
+      panelRight.children().eq(1).text(list.eq(1).attr("data-value"))
     } else if (listLabel.eq(0).text() == "Bunk Bed") {
       panelLeft.children().eq(1).text("Bunk Bed");
-      panelRight.children().eq(1).text(list.eq(2).attr("data-value")) //==list.eq(0).attr("data-value")+("zl");
+      panelRight.children().eq(1).text(list.eq(2).attr("data-value"))
     }
-
 
 
     if (listLabel.eq(1).text() == "Wooden") {
       panelLeft.children().eq(2).text("Wooden");
-      panelRight.children().eq(2).text(list.eq(3).attr("data-value")) //==list.eq(0).attr("data-value")+("zl");
+      panelRight.children().eq(2).text(list.eq(3).attr("data-value"))
     } else if (listLabel.eq(1).text() == "Metal") {
       panelLeft.children().eq(2).text("Metal");
-      panelRight.children().eq(2).text(list.eq(4).attr("data-value")) //==list.eq(0).attr("data-value")+("zl");
+      panelRight.children().eq(2).text(list.eq(4).attr("data-value"))
     } else if (listLabel.eq(1).text() == "Upholstered") {
       if (listLabel.eq(0).text() == "Bunk Bed") {
-
       } else {
         panelLeft.children().eq(2).text("Upholstered");
         panelRight.children().eq(2).text(list.eq(5).attr("data-value"));
       }
     }
 
-    var add = 0;
-    for (var k = 0; k < sumPanel.length; k++) {
+    let add = 0;
+    for (let k = 0; k < sumPanel.length; k++) {
       add += Number(sumPanel.eq(k).text());
     }
     sum.text(add + "$");
     add = 0;
-
   });
 
-  //usuwanie z checkboxa zaznaczenia
+  /*checkbox*/
   $('[type="checkbox"]').prop('checked', false);
 
-  //kalkulator z transport
+  /*transport and bedding calc*/
 
-  var transport = $('#transport');
-  var bedding = $('#beddingAdd');
-  var clicktransport = 0;
-  var clickbedding = 0;
+  let transport = $('#transport');
+  let bedding = $('#beddingAdd');
+  let clicktransport = 0;
+  let clickbedding = 0;
 
   transport.on("click", function(event) {
     clicktransport++;
-    ths = $(this);
+    let ths = $(this);
 
     if (panelLeft.children().eq(1).text() == "" && panelLeft.children().eq(2).text() == "") {
       alert("Firstly you have to choose your bed!")
@@ -213,7 +210,7 @@ $(function() {
 
   bedding.on("click", function() {
     clickbedding++;
-    ths = $(this);
+    let ths = $(this);
     if (panelLeft.children().eq(1).text() == "" && panelLeft.children().eq(2).text() == "") {
       alert("Firstly you have to choose your bed!")
       $('[type="checkbox"]').prop('checked', false);
@@ -234,10 +231,10 @@ $(function() {
   });
 
 
-  // podswietlanie po najechaniu installments options section4
-  var optionsBox = $(".option")
+  /*installments option*/
+  let optionsBox = $(".option")
   optionsBox.on("mouseover", function() {
-    ths = $(this);
+    let ths = $(this);
     ths.css("background-color", "rgb(0,0,46)");
     ths.children().eq(0).css("background-color", "rgb(0,0,46)");
     ths.children().eq(1).css("background-color", "white");
@@ -259,25 +256,24 @@ $(function() {
   })
 
 
-  //walidacja formularza
-  var validateName = $(".validate_error_name");
-  var validateEmail = $(".validate_error_email");
-  var validateMessage = $(".validate_error_message");
-  var nameForm = $('#name');
-  var emailForm = $("#email");
-  var messageForm = $("#message");
-  var agree = $("#agreement");
-  var buttonSend = $(".button_send");
-  var clickAgree = 0;
+  /*Form validation*/
+  let validateName = $(".validate_error_name");
+  let validateEmail = $(".validate_error_email");
+  let validateMessage = $(".validate_error_message");
+  let nameForm = $('#name');
+  let emailForm = $("#email");
+  let messageForm = $("#message");
+  let agree = $("#agreement");
+  let buttonSend = $(".button_send");
+  let clickAgree = 0;
 
   validateName.hide();
   validateEmail.hide();
   validateMessage.hide();
 
-
-  var error_name = false;
-  var error_email = false;
-  var error_message = false;
+  let error_name = false;
+  let error_email = false;
+  let error_message = false;
 
   nameForm.focusout(function() {
     check_name();
@@ -290,7 +286,7 @@ $(function() {
   })
 
   function check_name() {
-    var name_length = nameForm.val().length;
+    let name_length = nameForm.val().length;
     if (name_length < 5 || name_length > 20) {
       validateName.html("Should be between 5-20 characters");
       validateName.show();
@@ -301,7 +297,6 @@ $(function() {
   }
 
   function check_email() {
-
     if ((emailForm.val().indexOf("@") == -1) || (emailForm.val().indexOf(".") == -1)) {
       validateEmail.html("Email should contain have @ and .");
       validateEmail.css("display", "block");
@@ -312,7 +307,7 @@ $(function() {
   }
 
   function check_message() {
-    var message_length = messageForm.val().length;
+    let message_length = messageForm.val().length;
     if (message_length < 10 || message_length > 60) {
       validateMessage.html("Should be between 10-60 characters");
       validateMessage.show();

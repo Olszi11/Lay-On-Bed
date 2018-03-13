@@ -1,6 +1,5 @@
 * {
   font-family: 'Montserrat', sans-serif;
-  /*sciagnacczcionke*/
   box-sizing: border-box;
 }
 
@@ -12,7 +11,6 @@ html, body {
 }
 
 /*header*/
-
 header {
   background-color: rgb(0, 0, 46)
 }
@@ -71,7 +69,6 @@ header .container nav>ul>li {
 }
 
 /*dropdownmenu*/
-
 .drop_down_menu {
   background-color: rgb(0, 0, 46);
   list-style-type: none;
@@ -101,7 +98,6 @@ header .container nav>ul>li {
 }
 
 /*SECTION 1*/
-
 #section1 {
   width: 100%;
   height: 550px;
@@ -170,8 +166,7 @@ div #sectionLeft-box {
   cursor: pointer;
 }
 
-/*SLIDER*/
-
+/*slider*/
 #bedImages {
   height: 400px;
   width: 40vw;
@@ -201,8 +196,7 @@ div #sectionLeft-box {
   height: 400px;
 }
 
-/*SECTION2*/
-
+/*SECTION 2*/
 #section2 {
   width: 100%;
   height: 700px;
@@ -311,8 +305,7 @@ div #sectionLeft-box {
   left: 20px;
 }
 
-/*SECTION3*/
-
+/*SECTION 3*/
 #section3 {
   width: 100%;
   min-height: 600px;
@@ -380,14 +373,13 @@ div #sectionLeft-box {
   left: 0px;
 }
 
-/*SECTION3 drop DOWN list*/
-
+/*dropdownlist*/
 .drop_down_list:first-child {
   margin-top: 80px;
 }
 
 .drop_down_list {
-  width: 100%;
+  width: 350px;
   height: 3rem;
   background-color: white;
   margin-top: 30px;
@@ -441,8 +433,7 @@ div #sectionLeft-box {
   width: 50%;
 }
 
-/*SECTION3 CHECKBOX*/
-
+/*checkbox*/
 .checkbox {
   position: relative;
   margin-top: 20px;
@@ -485,8 +476,7 @@ div #sectionLeft-box {
   background-size: contain;
 }
 
-/*section3 images*/
-
+/*images*/
 #section3 .container>div:nth-child(3) {
   height: 350px;
   position: relative;
@@ -500,8 +490,7 @@ div #sectionLeft-box {
   height: 300px;
 }
 
-/*section3 summary calc*/
-
+/*summary calc*/
 .summary_panel {
   background-color: white;
   width: 100%;
@@ -570,8 +559,7 @@ div #sectionLeft-box {
   color: rgb(0, 0, 46);
 }
 
-/*Section4*/
-
+/*SECTION 4*/
 #section4 {
   width: 100%;
   min-height: 800px;
@@ -735,7 +723,7 @@ div #sectionLeft-box {
   cursor: pointer;
 }
 
-/*Section5 form*/
+/*SECTION 5*/
 
 #section5 {
   width: 100%;
@@ -976,13 +964,6 @@ footer .container .logo p {
   }
 }
 
-@media(min-width:1150px) {
-  .list_arrow {
-    position: relative;
-    left: 270px;
-  }
-}
-
 @media(min-width:700px) and (max-width: 1000px) {
   header .container {
     height: 60px;
@@ -1030,7 +1011,7 @@ footer .container .logo p {
     width: 60vw;
     height: 400px;
   }
-  /*section2*/
+  /*SECTION 2*/
   #section2 {
     height: 700px;
   }
@@ -1046,7 +1027,7 @@ footer .container .logo p {
     font-size: 0.8em;
     line-height: 1.0rem;
   }
-  /*section3*/
+  /*SECTION 3*/
   #section3 {
     height: 900px;
   }
@@ -1065,10 +1046,6 @@ footer .container .logo p {
     position: relative;
     left: 0px;
   }
-  .list_arrow {
-    position: relative;
-    left: 260px;
-  }
   .checkbox input {
     position: absolute;
     left: 250px;
@@ -1084,7 +1061,7 @@ footer .container .logo p {
     width: 40%;
     height: 40%;
   }
-  /*section4*/
+  /*SECTION 4*/
   #section4 .option {
     width: 200px;
   }
@@ -1104,7 +1081,7 @@ footer .container .logo p {
     position: absolute;
     left: 40px;
   }
-  /*section 5*/
+  /*SECTION 5*/
   #section5 {
     min-height: 450px;
   }
@@ -1173,7 +1150,7 @@ footer .container .logo p {
   .drop_down_menu:before {
     left: 40%;
   }
-  /*SECTION1*/
+  /*SECTION 1*/
   #section1 {
     height: 800px;
     display: flex;
@@ -1216,7 +1193,7 @@ footer .container .logo p {
     width: 90vw;
     height: 300px;
   }
-  /*section2*/
+  /*SECTION 2*/
   #section2 {
     height: 2000px;
   }
@@ -1226,7 +1203,7 @@ footer .container .logo p {
   #section2 .container>div {
     width: 100%;
   }
-  /*section3*/
+  /*SECTION 3*/
   #section3 {
     height: 1100px;
   }
@@ -1244,9 +1221,12 @@ footer .container .logo p {
   #section3 .container>p.title:first-child:after {
     width: 80%;
   }
+  .drop_down_list{
+    width: 280px;
+  }
   .list_arrow {
     position: relative;
-    left: 210px;
+    left: 230px
   }
   .list_label {
     font-size: 1rem;
@@ -1269,14 +1249,13 @@ footer .container .logo p {
     position: absolute;
     left: 210px;
   }
-  /*section3 images*/
   #section3 .container>div:nth-child(3) {
     height: 300px;
     position: relative;
     top: 10px;
     margin-bottom: 10px;
   }
-  /*Section4*/
+  /*SECTION 4*/
   #section4 {
     height: 2000px;
   }
@@ -1312,7 +1291,7 @@ footer .container .logo p {
     position: absolute;
     left: 40px;
   }
-  /*section5*/
+  /*SECTION 5*/
   #section5 {
     height: 900px;
   }
